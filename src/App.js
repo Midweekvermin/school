@@ -1,25 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Home from './Home.js';
+import Cat from './Cat.js';
+import Dog from './Dog.js';
+import Fish from './Fish.js';
+import Contact from './Contact.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  constructor () {
+    super();
+    this.state = {
+      route: 'Home'
+    }
+  }
+  routing = {
+    homes: () =>{
+      this.setState({route:'Home'});
+     },
+    cats:  () => {
+   this.setState({route:'Cat'});
+    },
+    dogs: () => {
+     this.setState({route:'Dog'});
+    },
+   fish: () =>{
+    this.setState({route:'Fish'});
+   },
+ 
+   contact: () =>{
+    this.setState({route:'Contact'});
+   },
+   
+     }
+
+
+  render () {
+    return (
+      this.state.route === 'Home' ? <Home routes={this.routing}/> : this.state.route === 'Cat' ?
+       <Cat routes={this.routing} /> : this.state.route === 'Dog'? <Dog routes={this.routing}/>: this.state.route === 'Fish'? <Fish routes={this.routing}/>:
+       this.state.route === 'Contact'? <Contact routes={this.routing}/>: null
+    );
+  }
 }
 
 export default App;

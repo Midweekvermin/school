@@ -1,0 +1,54 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.themain {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  display: flex;
+ background-color:#003B6D ;
+ color: #BDBDBD;
+ position: absolute;
+ left: 25%;
+ 
+}
+.navs{
+    display: flex;
+    justify-content: center;
+}
+.bigstuff {
+    background-color: #6699CC;
+    height: 100vh;
+    
+}
+.linkage {
+    display: flex;
+    flex: 1;
+}
+.side {
+    max-height: auto;
+    flex: 0 0 200px;
+    position: absolute;
+    left: 73%;
+    top: 22%;
+    background-color: #BDBDBD;
+}
+.side p {
+    color: #6699CC;
+}
+
+.side a {
+    color: #6699CC;
+    
+}
+.foot{
+    position: absolute;
+    top:100%;
+    left: 30%;
+    text-align: center;
+}
